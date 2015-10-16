@@ -1,0 +1,42 @@
+<ul class="nav">
+	<li>
+		<a can-href="{page='home'}" class="{{#eq page 'home'}}active{{/eq}}">Home</a>
+	</li>
+	<li>
+		<a can-href="{page='users'}" class="{{#eq page 'users'}}active{{/eq}}">Users</a>
+	</li>
+</ul>
+
+
+<div class="content">
+{{#switch page}}
+	{{#case 'home'}}
+		<h1>Home</h1>
+	{{/case}}
+	{{#case 'users'}}
+		{{#if slug}}
+			<h1>User - {{slug}}</h1>
+		{{else}}
+			<h1>Users</h1>
+			<ul>
+				<li><a can-href="{page='users' slug='1'}">User 1</a></li>
+				<li><a can-href="{page='users' slug='2'}">User 2</a></li>
+			</ul>
+		{{/if}}
+	{{/case}}
+	{{#default}}
+		<h1>balsdasd</h1>
+	{{/default}}
+{{/switch}}
+</div>
+
+
+
+<div class="app-state">
+	<h2>App State</h2>
+	<p>
+		<b>page:</b> {{ page }}<br>
+		<b>slug:</b> {{ slug }}<br>
+		<b>route:</b> {{ route }}
+	</p>
+</div>
