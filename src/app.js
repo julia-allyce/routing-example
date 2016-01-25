@@ -1,4 +1,4 @@
-import can from 'can/';
+import Can from 'can';
 import route from 'can/route/';
 import $ from 'jquery';
 import 'can/route/pushstate/';
@@ -12,6 +12,6 @@ var app = new AppState();
 route(':page', { page: 'home' });
 route(':page/:slug', { slug: null });
 
-can.route.map(app);
-can.route.ready();
+route.map(app);
+route.ready();
 $('body').append(appTemplate(app));

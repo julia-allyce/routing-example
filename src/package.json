@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "can": "^2.3.0-beta.5",
+    "can": "^2.3.10",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
-    "steal": "^0.11.0-pre.7"
+    "steal": "^0.13.2"
   }
 }
